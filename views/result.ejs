@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Grade Point Results</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Score</th>
+                <th>Grade Point</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% scores.forEach((score, index) => { %>
+                <tr>
+                    <td>Course <%= index + 1 %></td>
+                    <td><%= score %></td>
+                    <td><%= gradePoints[index] %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <h2>CGPA: <%= cgpa.toFixed(2) %></h2>
+    <a href="/">Calculate Again</a>
+</body>
+</html>
